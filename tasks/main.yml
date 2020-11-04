@@ -3,7 +3,7 @@
   user:
     name: "{{ item.name }}"
     shell: /bin/bash
-    groups: sudo
+    groups: [sudo]
     append: true
     state: present
     create_home: true
@@ -11,6 +11,7 @@
     update_password: on_create
   loop: "{{ ssh_users }}"
   register: user_create
+  notify: force change password
 
 - name: Add ssh user keys
   authorized_key:

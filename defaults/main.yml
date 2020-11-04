@@ -2,6 +2,6 @@
 ssh_users:
   - {
       name: gmcmillan,
-      key: "{{ lookup('file', 'gmcmillan.pub')}}",
+      key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGb9Tl68UPClWNlMmt3al/z7HvsHQHiSQSb8cZmrMx2cC+3hdsNfjRi5Wlc96cFOx/uoFTKGISeEs4tpxD65Deh6KXw6top4aU0y85HbJxPPimjSAohXzk57JviEs4e701L5Q6NifKz83HMVjlh+OZugoZUc6xkipXkBjv7zQhArHqKWPpvzpqGOUz4eIMRnH9/hf2r073kdj0fdDuPfkcvmKreesvhKs6fSp3u1YyXRAM1SW/jcZgrF1p2px2wOGSCL9yZ2NEUlzkvycGlMGK5sHBuFGpbfntvWxy9BUA5unqdKbrnn5edWBQAJE2lXh7AlwORUrA9mqZQZ++ru3n gmcmillan@Gmcmillans-MacBook-Pro.local",
       password: password123,
     }

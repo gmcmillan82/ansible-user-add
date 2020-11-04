@@ -1,6 +1,6 @@
 ---
-- hosts: platform_undefined
+- hosts: all 
   become: true
-  remote_user: gmcmillan 
+  remote_user: vagrant 
   roles:
-    - user-add
+    - ansible-user-add

@@ -3,3 +3,8 @@
   service:
     name: sshd
     state: restarted
+
+- name: force change password
+  command: "chage -d 0 {{ item.name }}"
+  when: user_create.changed
+  loop: "{{ ssh_users }}"

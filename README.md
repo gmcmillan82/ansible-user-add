@@ -1,4 +1,4 @@
-Role Name
+ansible-user-add
 =========
 
 This role will add a user and their public ssh keys to a server and assign an account password. It also adds the user to /etc/ssh/sshd_config AllowedUsers list. 

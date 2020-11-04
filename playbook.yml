@@ -1,0 +1,6 @@
+---
+- hosts: platform_undefined
+  become: true
+  remote_user: gmcmillan 
+  roles:
+    - user-add

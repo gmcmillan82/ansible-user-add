@@ -1,0 +1,20 @@
+---
+- name: Create users on server
+  user:
+    name: "{{ item.name }}"
+    shell: /bin/bash
+    groups: sudo
+    append: true
+    state: present
+    create_home: true
+    password: "{{ item.password | password_hash('sha512') }}"
+    update_password: on_create
+  loop: "{{ ssh_users }}"
+  register: user_create
+
+- name: Add ssh user keys
+  authorized_key:
+    user: "{{ item.name }}"
+    key: "{{ item.key }}"
+  loop: "{{ ssh_users }}"
+

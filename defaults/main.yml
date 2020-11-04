@@ -1,0 +1,7 @@
+---
+ssh_users:
+  - {
+      name: gmcmillan,
+      key: "{{ lookup('file', 'gmcmillan.pub')}}",
+      password: password123,
+    }
